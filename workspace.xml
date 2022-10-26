@@ -2541,6 +2541,7 @@
                                                             </statement>
                                                             <statement name="ACTIONS">
                                                               <block type="If">
+                                                                <mutation elseif="2"></mutation>
                                                                 <value name="VALUE-0">
                                                                   <block type="EventDamageTypeCompare">
                                                                     <value name="VALUE-0">
@@ -2676,42 +2677,80 @@
                                                                     </next>
                                                                   </block>
                                                                 </statement>
-                                                                <next>
-                                                                  <block type="If">
+                                                                <value name="IF1">
+                                                                  <block type="EventDamageTypeCompare">
                                                                     <value name="VALUE-0">
-                                                                      <block type="EventDamageTypeCompare">
-                                                                        <value name="VALUE-0">
-                                                                          <block type="EventDamageType"></block>
-                                                                        </value>
-                                                                        <value name="VALUE-1">
-                                                                          <block type="PlayerDamageTypesItem">
-                                                                            <field name="VALUE-0">PlayerDamageTypes</field>
-                                                                            <field name="VALUE-1">Default</field>
-                                                                          </block>
+                                                                      <block type="EventDamageType"></block>
+                                                                    </value>
+                                                                    <value name="VALUE-1">
+                                                                      <block type="PlayerDamageTypesItem">
+                                                                        <field name="VALUE-0">PlayerDamageTypes</field>
+                                                                        <field name="VALUE-1">Default</field>
+                                                                      </block>
+                                                                    </value>
+                                                                  </block>
+                                                                </value>
+                                                                <statement name="DO1">
+                                                                  <block type="SetVariable">
+                                                                    <value name="VALUE-0">
+                                                                      <block type="variableReferenceBlock">
+                                                                        <mutation isObjectVar="true"></mutation>
+                                                                        <field name="OBJECTTYPE">Player</field>
+                                                                        <field name="VAR" id="ricI0:lPL+1t6lN7N0xh" variabletype="Player">points</field>
+                                                                        <value name="OBJECT">
+                                                                          <block type="EventOtherPlayer"></block>
                                                                         </value>
                                                                       </block>
                                                                     </value>
-                                                                    <statement name="DO">
-                                                                      <block type="SetVariable">
+                                                                    <value name="VALUE-1">
+                                                                      <block type="Add">
                                                                         <value name="VALUE-0">
-                                                                          <block type="variableReferenceBlock">
-                                                                            <mutation isObjectVar="true"></mutation>
-                                                                            <field name="OBJECTTYPE">Player</field>
-                                                                            <field name="VAR" id="ricI0:lPL+1t6lN7N0xh" variabletype="Player">points</field>
-                                                                            <value name="OBJECT">
-                                                                              <block type="EventOtherPlayer"></block>
+                                                                          <block type="GetVariable">
+                                                                            <value name="VALUE-0">
+                                                                              <block type="variableReferenceBlock">
+                                                                                <mutation isObjectVar="true"></mutation>
+                                                                                <field name="OBJECTTYPE">Player</field>
+                                                                                <field name="VAR" id="ricI0:lPL+1t6lN7N0xh" variabletype="Player">points</field>
+                                                                                <value name="OBJECT">
+                                                                                  <block type="EventOtherPlayer"></block>
+                                                                                </value>
+                                                                              </block>
                                                                             </value>
                                                                           </block>
                                                                         </value>
                                                                         <value name="VALUE-1">
-                                                                          <block type="Add">
+                                                                          <block type="Multiply">
+                                                                            <value name="VALUE-0">
+                                                                              <block type="Number">
+                                                                                <field name="NUM">10</field>
+                                                                              </block>
+                                                                            </value>
+                                                                            <value name="VALUE-1">
+                                                                              <block type="GetVariable">
+                                                                                <value name="VALUE-0">
+                                                                                  <block type="variableReferenceBlock">
+                                                                                    <mutation isObjectVar="false"></mutation>
+                                                                                    <field name="OBJECTTYPE">Global</field>
+                                                                                    <field name="VAR" id="gSTx{!9[r5hlQ0:~/-[j" variabletype="Global">PointsMultiplier</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                              </block>
+                                                                            </value>
+                                                                          </block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </value>
+                                                                    <next>
+                                                                      <block type="If">
+                                                                        <value name="VALUE-0">
+                                                                          <block type="ArrayContains">
                                                                             <value name="VALUE-0">
                                                                               <block type="GetVariable">
                                                                                 <value name="VALUE-0">
                                                                                   <block type="variableReferenceBlock">
                                                                                     <mutation isObjectVar="true"></mutation>
                                                                                     <field name="OBJECTTYPE">Player</field>
-                                                                                    <field name="VAR" id="ricI0:lPL+1t6lN7N0xh" variabletype="Player">points</field>
+                                                                                    <field name="VAR" id="KC0F9f|rN10g=/bJ*A8U" variabletype="Player">PaPWeapons</field>
                                                                                     <value name="OBJECT">
                                                                                       <block type="EventOtherPlayer"></block>
                                                                                     </value>
@@ -2720,71 +2759,57 @@
                                                                               </block>
                                                                             </value>
                                                                             <value name="VALUE-1">
-                                                                              <block type="Multiply">
-                                                                                <value name="VALUE-0">
-                                                                                  <block type="Number">
-                                                                                    <field name="NUM">10</field>
-                                                                                  </block>
-                                                                                </value>
-                                                                                <value name="VALUE-1">
-                                                                                  <block type="GetVariable">
-                                                                                    <value name="VALUE-0">
-                                                                                      <block type="variableReferenceBlock">
-                                                                                        <mutation isObjectVar="false"></mutation>
-                                                                                        <field name="OBJECTTYPE">Global</field>
-                                                                                        <field name="VAR" id="gSTx{!9[r5hlQ0:~/-[j" variabletype="Global">PointsMultiplier</field>
-                                                                                      </block>
-                                                                                    </value>
-                                                                                  </block>
-                                                                                </value>
-                                                                              </block>
+                                                                              <block type="EventWeapon"></block>
                                                                             </value>
                                                                           </block>
                                                                         </value>
-                                                                        <next>
-                                                                          <block type="If">
+                                                                        <statement name="DO">
+                                                                          <block type="SetPlayerDamage">
                                                                             <value name="VALUE-0">
-                                                                              <block type="ArrayContains">
-                                                                                <value name="VALUE-0">
-                                                                                  <block type="GetVariable">
-                                                                                    <value name="VALUE-0">
-                                                                                      <block type="variableReferenceBlock">
-                                                                                        <mutation isObjectVar="true"></mutation>
-                                                                                        <field name="OBJECTTYPE">Player</field>
-                                                                                        <field name="VAR" id="KC0F9f|rN10g=/bJ*A8U" variabletype="Player">PaPWeapons</field>
-                                                                                        <value name="OBJECT">
-                                                                                          <block type="EventOtherPlayer"></block>
-                                                                                        </value>
-                                                                                      </block>
-                                                                                    </value>
-                                                                                  </block>
-                                                                                </value>
-                                                                                <value name="VALUE-1">
-                                                                                  <block type="EventWeapon"></block>
-                                                                                </value>
+                                                                              <block type="EventPlayer"></block>
+                                                                            </value>
+                                                                            <value name="VALUE-1">
+                                                                              <block type="Number">
+                                                                                <field name="NUM">80</field>
                                                                               </block>
                                                                             </value>
-                                                                            <statement name="DO">
-                                                                              <block type="SetPlayerDamage">
-                                                                                <value name="VALUE-0">
-                                                                                  <block type="EventPlayer"></block>
-                                                                                </value>
-                                                                                <value name="VALUE-1">
-                                                                                  <block type="Number">
-                                                                                    <field name="NUM">80</field>
-                                                                                  </block>
-                                                                                </value>
-                                                                                <value name="VALUE-2">
-                                                                                  <block type="EventOtherPlayer"></block>
-                                                                                </value>
-                                                                              </block>
-                                                                            </statement>
+                                                                            <value name="VALUE-2">
+                                                                              <block type="EventOtherPlayer"></block>
+                                                                            </value>
                                                                           </block>
-                                                                        </next>
+                                                                        </statement>
                                                                       </block>
-                                                                    </statement>
+                                                                    </next>
                                                                   </block>
-                                                                </next>
+                                                                </statement>
+                                                                <value name="IF2">
+                                                                  <block type="EventDamageTypeCompare">
+                                                                    <value name="VALUE-0">
+                                                                      <block type="EventDamageType"></block>
+                                                                    </value>
+                                                                    <value name="VALUE-1">
+                                                                      <block type="PlayerDamageTypesItem">
+                                                                        <field name="VALUE-0">PlayerDamageTypes</field>
+                                                                        <field name="VALUE-1">Explosion</field>
+                                                                      </block>
+                                                                    </value>
+                                                                  </block>
+                                                                </value>
+                                                                <statement name="DO2">
+                                                                  <block type="SetPlayerDamage">
+                                                                    <value name="VALUE-0">
+                                                                      <block type="EventPlayer"></block>
+                                                                    </value>
+                                                                    <value name="VALUE-1">
+                                                                      <block type="Number">
+                                                                        <field name="NUM">50</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <value name="VALUE-2">
+                                                                      <block type="EventOtherPlayer"></block>
+                                                                    </value>
+                                                                  </block>
+                                                                </statement>
                                                               </block>
                                                             </statement>
                                                           </block>
@@ -16500,21 +16525,6 @@
   </block>
   <block type="Number" x="0" y="2958">
     <field name="NUM">2</field>
-  </block>
-  <block type="If" x="1446" y="3031">
-    <value name="VALUE-0">
-      <block type="GetSoldierState">
-        <value name="VALUE-0">
-          <block type="EventPlayer"></block>
-        </value>
-        <value name="VALUE-1">
-          <block type="SoldierStateBoolItem">
-            <field name="VALUE-0">SoldierStateBool</field>
-            <field name="VALUE-1">IsInteracting</field>
-          </block>
-        </value>
-      </block>
-    </value>
   </block>
   <block type="subroutineBlock" deletable="false" x="3649" y="3337">
     <field name="SUBROUTINE_NAME">BuySelectedItem</field>
