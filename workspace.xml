@@ -1495,7 +1495,7 @@
                                                               <block type="variableReferenceBlock">
                                                                 <mutation isObjectVar="true"></mutation>
                                                                 <field name="OBJECTTYPE">Player</field>
-                                                                <field name="VAR" id="c8/6~+T]a@b{^/@Rfo#!" variabletype="Player">isDown</field>
+                                                                <field name="VAR" id="loVeKSiddW(Tds_?x$t2" variabletype="Player">FiredPapWeapon</field>
                                                                 <value name="OBJECT">
                                                                   <block type="EventPlayer"></block>
                                                                 </value>
@@ -1512,7 +1512,7 @@
                                                                   <block type="variableReferenceBlock">
                                                                     <mutation isObjectVar="true"></mutation>
                                                                     <field name="OBJECTTYPE">Player</field>
-                                                                    <field name="VAR" id="pS+1;}E1`RRQf;kAH?fv" variabletype="Player">ShouldUpdateNearbyTriggers</field>
+                                                                    <field name="VAR" id="c8/6~+T]a@b{^/@Rfo#!" variabletype="Player">isDown</field>
                                                                     <value name="OBJECT">
                                                                       <block type="EventPlayer"></block>
                                                                     </value>
@@ -1520,7 +1520,7 @@
                                                                 </value>
                                                                 <value name="VALUE-1">
                                                                   <block type="Boolean">
-                                                                    <field name="BOOL">TRUE</field>
+                                                                    <field name="BOOL">FALSE</field>
                                                                   </block>
                                                                 </value>
                                                                 <next>
@@ -1529,7 +1529,7 @@
                                                                       <block type="variableReferenceBlock">
                                                                         <mutation isObjectVar="true"></mutation>
                                                                         <field name="OBJECTTYPE">Player</field>
-                                                                        <field name="VAR" id="B{mN5OQfoDy2bvlLz;,`" variabletype="Player">justStabbed</field>
+                                                                        <field name="VAR" id="pS+1;}E1`RRQf;kAH?fv" variabletype="Player">ShouldUpdateNearbyTriggers</field>
                                                                         <value name="OBJECT">
                                                                           <block type="EventPlayer"></block>
                                                                         </value>
@@ -1537,7 +1537,7 @@
                                                                     </value>
                                                                     <value name="VALUE-1">
                                                                       <block type="Boolean">
-                                                                        <field name="BOOL">FALSE</field>
+                                                                        <field name="BOOL">TRUE</field>
                                                                       </block>
                                                                     </value>
                                                                     <next>
@@ -1546,7 +1546,7 @@
                                                                           <block type="variableReferenceBlock">
                                                                             <mutation isObjectVar="true"></mutation>
                                                                             <field name="OBJECTTYPE">Player</field>
-                                                                            <field name="VAR" id="TUHFw=8nTS#|:qtShk90" variabletype="Player">justBoughtItem</field>
+                                                                            <field name="VAR" id="B{mN5OQfoDy2bvlLz;,`" variabletype="Player">justStabbed</field>
                                                                             <value name="OBJECT">
                                                                               <block type="EventPlayer"></block>
                                                                             </value>
@@ -1563,7 +1563,7 @@
                                                                               <block type="variableReferenceBlock">
                                                                                 <mutation isObjectVar="true"></mutation>
                                                                                 <field name="OBJECTTYPE">Player</field>
-                                                                                <field name="VAR" id="_a!wY.y2}+9{k8|?C4Sz" variabletype="Player">Juggernog</field>
+                                                                                <field name="VAR" id="TUHFw=8nTS#|:qtShk90" variabletype="Player">justBoughtItem</field>
                                                                                 <value name="OBJECT">
                                                                                   <block type="EventPlayer"></block>
                                                                                 </value>
@@ -1580,7 +1580,7 @@
                                                                                   <block type="variableReferenceBlock">
                                                                                     <mutation isObjectVar="true"></mutation>
                                                                                     <field name="OBJECTTYPE">Player</field>
-                                                                                    <field name="VAR" id="]q($QE/[o4@atar$an?B" variabletype="Player">QuickRevive</field>
+                                                                                    <field name="VAR" id="_a!wY.y2}+9{k8|?C4Sz" variabletype="Player">Juggernog</field>
                                                                                     <value name="OBJECT">
                                                                                       <block type="EventPlayer"></block>
                                                                                     </value>
@@ -1597,7 +1597,7 @@
                                                                                       <block type="variableReferenceBlock">
                                                                                         <mutation isObjectVar="true"></mutation>
                                                                                         <field name="OBJECTTYPE">Player</field>
-                                                                                        <field name="VAR" id=",;}oM*N}FWOnnOQ_%KAx" variabletype="Player">ShouldUpdatePoints</field>
+                                                                                        <field name="VAR" id="]q($QE/[o4@atar$an?B" variabletype="Player">QuickRevive</field>
                                                                                         <value name="OBJECT">
                                                                                           <block type="EventPlayer"></block>
                                                                                         </value>
@@ -1609,37 +1609,56 @@
                                                                                       </block>
                                                                                     </value>
                                                                                     <next>
-                                                                                      <block type="EnableInputRestriction">
+                                                                                      <block type="SetVariable">
                                                                                         <value name="VALUE-0">
-                                                                                          <block type="EventPlayer"></block>
-                                                                                        </value>
-                                                                                        <value name="VALUE-1">
-                                                                                          <block type="RestrictedInputsItem">
-                                                                                            <field name="VALUE-0">RestrictedInputs</field>
-                                                                                            <field name="VALUE-1">Jump</field>
+                                                                                          <block type="variableReferenceBlock">
+                                                                                            <mutation isObjectVar="true"></mutation>
+                                                                                            <field name="OBJECTTYPE">Player</field>
+                                                                                            <field name="VAR" id=",;}oM*N}FWOnnOQ_%KAx" variabletype="Player">ShouldUpdatePoints</field>
+                                                                                            <value name="OBJECT">
+                                                                                              <block type="EventPlayer"></block>
+                                                                                            </value>
                                                                                           </block>
                                                                                         </value>
-                                                                                        <value name="VALUE-2">
+                                                                                        <value name="VALUE-1">
                                                                                           <block type="Boolean">
-                                                                                            <field name="BOOL">TRUE</field>
+                                                                                            <field name="BOOL">FALSE</field>
                                                                                           </block>
                                                                                         </value>
                                                                                         <next>
-                                                                                          <block type="SetPlayerMaxHealth">
+                                                                                          <block type="EnableInputRestriction">
                                                                                             <value name="VALUE-0">
                                                                                               <block type="EventPlayer"></block>
                                                                                             </value>
                                                                                             <value name="VALUE-1">
-                                                                                              <block type="Number">
-                                                                                                <field name="NUM">100</field>
+                                                                                              <block type="RestrictedInputsItem">
+                                                                                                <field name="VALUE-0">RestrictedInputs</field>
+                                                                                                <field name="VALUE-1">Jump</field>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                            <value name="VALUE-2">
+                                                                                              <block type="Boolean">
+                                                                                                <field name="BOOL">TRUE</field>
                                                                                               </block>
                                                                                             </value>
                                                                                             <next>
-                                                                                              <block type="subroutineInstanceBlock">
-                                                                                                <field name="SUBROUTINE_NAME">createInventory</field>
+                                                                                              <block type="SetPlayerMaxHealth">
+                                                                                                <value name="VALUE-0">
+                                                                                                  <block type="EventPlayer"></block>
+                                                                                                </value>
+                                                                                                <value name="VALUE-1">
+                                                                                                  <block type="Number">
+                                                                                                    <field name="NUM">100</field>
+                                                                                                  </block>
+                                                                                                </value>
                                                                                                 <next>
                                                                                                   <block type="subroutineInstanceBlock">
-                                                                                                    <field name="SUBROUTINE_NAME">UpdatePoints</field>
+                                                                                                    <field name="SUBROUTINE_NAME">createInventory</field>
+                                                                                                    <next>
+                                                                                                      <block type="subroutineInstanceBlock">
+                                                                                                        <field name="SUBROUTINE_NAME">UpdatePoints</field>
+                                                                                                      </block>
+                                                                                                    </next>
                                                                                                   </block>
                                                                                                 </next>
                                                                                               </block>
