@@ -684,7 +684,7 @@
       </block>
     </statement>
   </block>
-  <block type="modBlock" deletable="false" x="-1587" y="1539">
+  <block type="modBlock" deletable="false" x="-1548" y="1549">
     <statement name="RULES">
       <block type="ruleBlock">
         <mutation isOnGoingEvent="false"></mutation>
@@ -1134,7 +1134,7 @@
                                   <block type="Message">
                                     <value name="VALUE-0">
                                       <block type="Text">
-                                        <field name="TEXT">Round in progress, waiting to deploy...</field>
+                                        <field name="TEXT">You will be deployed when the next wave starts</field>
                                       </block>
                                     </value>
                                   </block>
@@ -1980,7 +1980,7 @@
                                         <value name="VALUE-1">
                                           <block type="SoldierStateBoolItem">
                                             <field name="VALUE-0">SoldierStateBool</field>
-                                            <field name="VALUE-1">IsDead</field>
+                                            <field name="VALUE-1">IsAISoldier</field>
                                           </block>
                                         </value>
                                       </block>
@@ -16402,7 +16402,7 @@
   <block type="Number" x="-2383" y="5812">
     <field name="NUM">4</field>
   </block>
-  <block type="subroutineBlock" collapsed="true" deletable="false" x="-1966" y="8404">
+  <block type="subroutineBlock" deletable="false" x="-3035" y="8369">
     <field name="SUBROUTINE_NAME">LoseGame</field>
     <statement name="ACTIONS">
       <block type="DisplayCustomNotificationMessage">
@@ -16410,7 +16410,7 @@
           <block type="Message">
             <value name="VALUE-0">
               <block type="Text">
-                <field name="TEXT">GAME OVER! YOU SURVIVED {} ROUNDS, GAME WILL RESTART IN 180 SECONDS</field>
+                <field name="TEXT">GAME OVER! YOU SURVIVED {} ROUNDS, GAME WILL RESTART IN 60 SECONDS</field>
               </block>
             </value>
             <value name="VALUE-1">
@@ -16441,7 +16441,7 @@
           <block type="Wait">
             <value name="VALUE-0">
               <block type="Number">
-                <field name="NUM">180</field>
+                <field name="NUM">60</field>
               </block>
             </value>
             <next>
